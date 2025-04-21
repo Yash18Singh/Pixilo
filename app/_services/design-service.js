@@ -2,19 +2,19 @@ import { fetchWithAuth } from "./base-service";
 
 
 export async function getUserDesigns(){
-    return fetchWithAuth('/v1/designs', {
+    return fetchWithAuth('/api/designs', {
         method: 'GET'
     })
 };
 
 export async function getUserDesignByID(designId){
-    return fetchWithAuth(`/v1/designs/${designId}`, {
+    return fetchWithAuth(`/api/designs/${designId}`, {
         method: 'GET'
     })
 };
 
 export async function saveDesign(designData, designId=null){
-    return fetchWithAuth(`/v1/designs`, {
+    return fetchWithAuth(`/api/designs`, {
         method: 'POST',
         body: {
             ...designData,
@@ -25,7 +25,7 @@ export async function saveDesign(designData, designId=null){
 
 
 export async function deleteDesign(designId){
-    return fetchWithAuth(`/v1/designs/${designId}`, {
+    return fetchWithAuth(`/api/designs/${designId}`, {
         method: 'DELETE'
     })
 };
