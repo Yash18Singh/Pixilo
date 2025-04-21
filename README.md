@@ -1,4 +1,4 @@
-✨ Pixilo — Your Creative Playground for Custom Designs
+✨ Pixilo —
 Pixilo is a modern, intuitive, and powerful online design editor built for creators, designers, and businesses who want to craft visually appealing graphics effortlessly. Whether you're designing social media posts, posters, digital art, or business branding assets — Pixilo gives you the tools and flexibility to design anything from scratch or based on templates.
 
 🔧 Key Features:
