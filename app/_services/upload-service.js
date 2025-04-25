@@ -2,7 +2,7 @@ import axios from "axios";
 import { getSession } from "next-auth/react";
 import { fetchWithAuth } from "./base-service";
 
-const API_URL = process.env.API_URL || 'http://localhost:5000';
+const API_URL = process.env.API_URL || 'https://pixilo-server.onrender.com';
 
 export async function uploadFileWithAuth(file, metaData={}){
     const session = await getSession();
