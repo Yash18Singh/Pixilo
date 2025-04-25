@@ -2,7 +2,7 @@ import axios from "axios";
 import { getSession } from "next-auth/react";
 import { fetchWithAuth } from "./base-service";
 
-const API_URL = process.env.API_URL || 'https://pixilo-server.onrender.com';
+const API_URL = process.env.API_URL || 'http://localhost:5000';
 
 export async function uploadFileWithAuth(file, metaData={}){
     const session = await getSession();
@@ -19,7 +19,7 @@ export async function uploadFileWithAuth(file, metaData={}){
     });
 
     try {
-        const response = await axios.post(`${API_URL}/api/media/upload`, formData, {
+        const response = await axios.post(`${API_URL}/v1/media/upload`, formData, {
             headers: {
                 Authorization: `Bearer ${session.idToken}`,
                 "Content-Type": 'multipart/form-data'
@@ -36,7 +36,7 @@ export async function uploadFileWithAuth(file, metaData={}){
 
 export async function generateImageFromAI(prompt){
     try {
-        const response = await fetchWithAuth('/api/media/ai-image-generate', {
+        const response = await fetchWithAuth('/v1/media/ai-image-generate', {
             method: 'POST',
             body: {
                 prompt,

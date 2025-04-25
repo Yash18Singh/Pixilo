@@ -1,5 +1,5 @@
 import { fetchWithAuth } from "./base-service";
 
 export async function getUserSubscription(){
-    return fetchWithAuth(`/api/subscription`)
+    return fetchWithAuth(`/v1/subscription`)
 };
