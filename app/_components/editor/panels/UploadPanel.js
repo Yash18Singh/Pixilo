@@ -24,7 +24,7 @@ const UploadPanel = () => {
 
     try {
       setIsLoading(true);
-      const data = await fetchWithAuth('/v1/media/get');
+      const data = await fetchWithAuth('/media/get');
       console.log('UPLOADS :', data);
       setUserUploads(data?.data || []);
     } catch (error) {
